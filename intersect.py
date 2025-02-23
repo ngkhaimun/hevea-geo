@@ -5,7 +5,7 @@ from service.unit import *
 from streamlit_folium import st_folium
 
 st.set_page_config(
-    page_title="Introduction",
+    page_title="Gea-location Intersection",
     page_icon="👋", 
     layout="wide"
 )
@@ -16,7 +16,7 @@ _dataset = [{"name":"Hevea KB","geometry":{"type":"Polygon","center_location":[4
 # center on Liberty Bell, add marker
 st.write(
         """
-        Below is example of how inter-section detection, and trigger between : -
+        Below is example show how inter-section detection, and testing data can be selected between : -
         - Hevea KB - Guard House & Hevea KB
         - Proposed Developments & SilverValley Technology Park
         """)
@@ -29,7 +29,7 @@ m = folium.Map(location=[4.747636, 101.1099], zoom_start=16 )
 with st.sidebar:
 
     options = st.multiselect(
-        "Choose geolocation for inter-section detection", 
+        "Choose 2 different location for inter-section detection", 
         [d['name'] for d in _dataset],
         max_selections=2,
     )
@@ -69,5 +69,8 @@ with st.sidebar:
         st.write("[**{0}**] is overlap by : {1}%".format(_inner_poly_name, overlap_percentage(outer_poly, inner_poly)))
 
 
-st_folium(m, width=2000, height=700, returned_objects=[])
+st_folium(m, width=2000, height=500, returned_objects=[])
 
+
+st.write("Above polygon was configure for folium-map by using the following data : ")
+st.write(_dataset)
