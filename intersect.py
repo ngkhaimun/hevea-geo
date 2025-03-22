@@ -13,7 +13,7 @@ st.set_page_config(
 
 _dataset = [{"name":"Hevea KB","geometry":{"type":"Polygon","center_location":[4.747636,101.103208],"coordinates":[[4.748641,101.101674],[4.746631,101.101127],[4.746428,101.105515],[4.746909,101.105547],[4.74847,101.105268],[4.748641,101.101674]]}},{"name":"Hevea KB - Guard House","geometry":{"type":"Polygon","center_location":[4.747636,101.103208],"coordinates":[[4.748304,101.103026],[4.748277,101.103508],[4.748106,101.103508],[4.748144,101.103026],[4.748304,101.103026]]}},{"name":"SilverValley Technology Park","geometry":{"type":"Polygon","center_location":[4.746952,101.09948],"coordinates":[[4.746775,101.09911],[4.747165,101.09911],[4.747165,101.099877],[4.746775,101.099877],[4.746775,101.09911]]}},{"name":"Proposed Developments","geometry":{"type":"Polygon","center_location":[4.746299,101.097972],"coordinates":[[4.748769,101.099389],[4.745252,101.099313],[4.745273,101.096374],[4.748801,101.096395],[4.748769,101.099389]]}}]
 
-# center on Liberty Bell, add marker
+
 st.write(
         """
         Below is example show how inter-section detection, and testing data can be selected between : -
